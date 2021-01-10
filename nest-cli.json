@@ -1,0 +1,39 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/kafka-partitioning/src",
+  "monorepo": true,
+  "root": "apps/kafka-partitioning",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/kafka-partitioning/tsconfig.app.json"
+  },
+  "projects": {
+    "kafka-partitioning": {
+      "type": "application",
+      "root": "apps/kafka-partitioning",
+      "entryFile": "main",
+      "sourceRoot": "apps/kafka-partitioning/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/kafka-partitioning/tsconfig.app.json"
+      }
+    },
+    "consumer": {
+      "type": "application",
+      "root": "apps/consumer",
+      "entryFile": "main",
+      "sourceRoot": "apps/consumer/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/consumer/tsconfig.app.json"
+      }
+    },
+    "producer2": {
+      "type": "application",
+      "root": "apps/producer2",
+      "entryFile": "main",
+      "sourceRoot": "apps/producer2/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/producer2/tsconfig.app.json"
+      }
+    }
+  }
+}
