@@ -17,7 +17,7 @@ yarn start:dev consumer
 yarn start:dev consumer
 ```
 
-Create some job:
+Create some jobs:
 ```sh
 curl -L https://goo.gl/S1Dc3R | bash -s 5 "localhost:3000"
 ```

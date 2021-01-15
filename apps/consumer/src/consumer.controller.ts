@@ -9,7 +9,15 @@ export class ConsumerController {
   @MessagePattern('cmdsum')
   async getHello(@Ctx() context: KafkaContext): Promise<any> {
     const originalMessage = context.getMessage();
-    console.log('originalMessage', originalMessage);
+    console.log('originalMessage', originalMessage.key);
     return { key: originalMessage.key, value: 'yolo' };
+  }
+
+  @MessagePattern('cmdsum8')
+  async getHello2(@Ctx() context: KafkaContext): Promise<any> {
+    const originalMessage = context.getMessage();
+    console.log('originalMessage', originalMessage.key);
+    console.log('headers', originalMessage.headers);
+    return { value: originalMessage.key };
   }
 }

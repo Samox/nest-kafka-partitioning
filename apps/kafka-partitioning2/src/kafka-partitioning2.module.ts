@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport, KafkaOptions } from '@nestjs/microservices';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { KafkaPartitioning2Controller } from './kafka-partitioning2.controller';
+import { KafkaPartitioning2Service } from './kafka-partitioning2.service';
 
 @Module({
   imports: [
@@ -21,7 +21,7 @@ import { AppService } from './app.service';
       },
     ]),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [KafkaPartitioning2Controller],
+  providers: [KafkaPartitioning2Service],
 })
-export class AppModule {}
+export class KafkaPartitioning2Module {}
